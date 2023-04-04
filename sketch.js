@@ -68,11 +68,14 @@ function preload(){
     mrHeroImg = loadImage("assets/mrHero.png");
     backgroundImg = loadImage("assets/background.png");
     lifeImg = loadImage("assets/life.png");
-    font[0] = loadFont("assets/nature-spirit-font/NatureSpiritRough-z8mJD.otf");
-    font[1] = loadFont("assets/nature-spirit-font/NatureSpirit-jE7RM.otf")
     for(let i = 0; i < 9; i++){
         dragonImg[i] = loadImage(`assets/dragon${i+1}.png`);
     }
+
+    //  Loading Font
+    font[0] = loadFont("assets/nature-spirit-font/NatureSpiritRough-z8mJD.otf");
+    font[1] = loadFont("assets/nature-spirit-font/NatureSpirit-jE7RM.otf");
+    font[2] = loadFont("assets/nature-spirit-font/HerrVonMuellerhoff-Regular.ttf");
 
     //  Animations
     fireImg = loadAnimation("assets/fire1.png", "assets/fire2.png", "assets/fire3.png", "assets/fire4.png");
@@ -96,6 +99,9 @@ function setup(){
 
 function draw(){
     background(backgroundImg);
+    textFont(font[2], 25);
+    text("Swagatika", width -50, height-15);
+    fill(255, 255, 255);
 
     if(gameState === PLAY){
         playState();

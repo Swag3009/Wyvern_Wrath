@@ -33,6 +33,32 @@ canvas {
     background-color: #EBEEEE;
 }
 
+.helpBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px 40px;
+    position: absolute;
+    width: 134px;
+    height: 33px;
+    background: #FFFFFF;
+    box-shadow: 3px 6px 10px #70D5C6;
+    border-radius: 12px;
+    border-width: 0px;
+    font-family: Nature_Spirit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.305em;
+    color: #50448E;
+}
+
+.helpBtn:hover{
+    background-color: #EBEEEE;
+}
+
 .retryBtn{
     display: flex;
     flex-direction: row;
@@ -47,7 +73,7 @@ canvas {
     background: #FFFFFF;
     box-shadow: 3px 6px 10px #70D5C6;
     border-radius: 25px;
-    font-family: 'Nature Spirit';
+    font-family: Nature_Spirit;
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
@@ -76,7 +102,7 @@ canvas {
     background: #FFFFFF;
     box-shadow: 3px 6px 10px #70D5C6;
     border-radius: 25px;
-    font-family: 'Nature Spirit';
+    font-family: Nature_Spirit;
     font-style: normal;
     font-weight: 400;
     font-size: 55px;

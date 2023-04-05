@@ -55,7 +55,7 @@ let difficultyLevel = {
 
 //  START gamestate
 let mouseCheckbox, keyboardCheckbox, soundPermission;
-let startBtn;
+let startBtn, helpBtn;
 
 //  End gamestate
 let retryBtn;
@@ -142,6 +142,14 @@ function startSetup(){
         soundPermission.remove();
         gameState = PLAY;
     })    
+
+    helpBtn = createElement('button', "HELP");
+    //helpBtn.position(width/2 - 65, height/2+200);
+    helpBtn.position(25, height-50);
+    helpBtn.class('helpBtn')
+    helpBtn.mouseClicked(()=>{
+        helpModal();
+    })
 }
 
 function startState(){
@@ -330,3 +338,26 @@ function wonState(){
     fill(255, 255, 255);
 }
 
+function helpModal(){
+    swal(
+        {
+            title: `Help`,
+            showConfirmButton: false,
+            showCancelButton: false,
+            cancelButtonText: "Okay", 
+            allowOutsideClick: true,
+            text: `
+            @ Choose mouse or keyboard to move protagonist on start screen.\n
+            @ You can both click the mouse and press the space key to fire.\n
+            @ There are 5 levels in the game. Every time you kill 30 wyverns, you level up.\n
+            @ You need to kill 150 wyverns to win the game.`,
+
+        },
+        function(isConfirm) {
+            if (isConfirm) {
+                second.loop();
+                second.setVolume(0.8);
+            }
+        }
+    );
+} 

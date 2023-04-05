@@ -327,7 +327,7 @@ function endState(){
 //  Game Own State functions
 function wonSetup(){
     replayBtn = createElement('button', 'REPLAY');
-    replayBtn.position(width/2 - 131, height/2+80);
+    replayBtn.position(width/2 - 147, height/2+80);
     replayBtn.class('replayBtn');
     replayBtn.mouseClicked(()=>{
         btnClickSound.play();

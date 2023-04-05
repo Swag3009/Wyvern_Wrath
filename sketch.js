@@ -131,18 +131,6 @@ function startSetup(){
     soundPermission.position(width - 170, 80);
     soundPermission.class('soundPermission');
 
-    startBtn = createElement('button', "START");
-    startBtn.position(width/2 - 132, height/2+80);
-    startBtn.class('startBtn')
-    startBtn.mouseClicked(()=>{
-        btnClickSound.play();
-        startBtn.remove();
-        mouseCheckbox.remove();
-        keyboardCheckbox.remove();
-        soundPermission.remove();
-        gameState = PLAY;
-    })    
-
     helpBtn = createElement('button', "HELP");
     //helpBtn.position(width/2 - 65, height/2+200);
     helpBtn.position(25, height-50);
@@ -150,6 +138,21 @@ function startSetup(){
     helpBtn.mouseClicked(()=>{
         helpModal();
     })
+
+    startBtn = createElement('button', "START");
+    startBtn.position(width/2 - 132, height/2+80);
+    startBtn.class('startBtn')
+    startBtn.mouseClicked(()=>{
+        btnClickSound.play();
+        startBtn.remove();
+        helpBtn.remove();
+        mouseCheckbox.remove();
+        keyboardCheckbox.remove();
+        soundPermission.remove();
+        gameState = PLAY;
+    })    
+
+    
 }
 
 function startState(){
@@ -264,7 +267,7 @@ function playState(){
             dragonScreech.play();
             if(playBgSound.isPlaying()){
                 playBgSound.stop();
-                overBgSound.setVolume(0.3);
+                overBgSound.setVolume(0.5);
                 overBgSound.play();
             }
             gameState = END;
@@ -316,6 +319,8 @@ function endState(){
     textAlign(CENTER);
     textStyle(BOLD);
     text("G A M E  O V E R", width/2, height/2);
+    textSize(40)
+    text("S c o r e :  "+ score, width/2, height/3-50)
     fill(255, 255, 255);
 }
 
@@ -347,8 +352,8 @@ function helpModal(){
             cancelButtonText: "Okay", 
             allowOutsideClick: true,
             text: `
-            @ Choose mouse or keyboard to move protagonist on start screen.\n
-            @ You can both click the mouse and press the space key to fire.\n
+            @ On start screen choose mouse or keyboard to move protagonist.\n
+            @ You can both click the mouse or press the space key to fire.\n
             @ There are 5 levels in the game. Every time you kill 30 wyverns, you level up.\n
             @ You need to kill 150 wyverns to win the game.`,
 

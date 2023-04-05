@@ -119,26 +119,17 @@ function startSetup(){
     mouseCheckbox = createCheckbox('   Mouse', true);
     mouseCheckbox.changed(userChoiceCheckedEvent);
     mouseCheckbox.position(width - 170, 30);
-    mouseCheckbox.style('font-size', '20px');
-    mouseCheckbox.style('color', '#ffffff');
-    mouseCheckbox.style('vertical-align', 'text-top');
-    mouseCheckbox.style('font-family', 'monospace');
+    mouseCheckbox.class('mouseCheckbox');
 
     keyboardCheckbox = createCheckbox('   Keyboard', false);
     keyboardCheckbox.changed(userChoiceCheckedEvent);
     keyboardCheckbox.position(width - 170, 55);
-    keyboardCheckbox.style('font-size', '20px');
-    keyboardCheckbox.style('color', '#ffffff');
-    keyboardCheckbox.style('vertical-align', 'text-top');
-    keyboardCheckbox.style('font-family', 'monospace');
+    keyboardCheckbox.class('keyboardCheckbox');
 
     soundPermission = createCheckbox('   Sound', false);
     soundPermission.changed(soundCheckedEven);
     soundPermission.position(width - 170, 80);
-    soundPermission.style('font-size', '20px');
-    soundPermission.style('color', '#ffffff');
-    soundPermission.style('vertical-align', 'text-top');
-    soundPermission.style('font-family', 'monospace');
+    soundPermission.class('soundPermission');
 
     startBtn = createElement('button', "START");
     startBtn.position(width/2 - 132, height/2+80);

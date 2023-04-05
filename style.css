@@ -90,3 +90,24 @@ canvas {
 .replayBtn:hover{
     background-color: #EBEEEE;
 }
+
+.mouseCheckbox{
+    font-size: 20px;
+    color: #FFFFFF;
+    vertical-align: text-top;
+    font-family: monospace;
+}
+
+.keyboardCheckbox{
+    font-size: 20px;
+    color: #FFFFFF;
+    vertical-align: text-top;
+    font-family: monospace;
+}
+
+.soundPermission{
+    font-size: 20px;
+    color: #FFFFFF;
+    vertical-align: text-top;
+    font-family: monospace;
+}

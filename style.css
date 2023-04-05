@@ -1,0 +1,92 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+canvas {
+    display: block;
+}
+
+.startBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    background-color: white;
+    font-family: Nature_Spirit;
+    font-size: 55px;
+    width: 264px;
+    height: 74px;
+    border-width: 0;
+    border-radius: 25px;
+    text-align: center;
+    color: #50448E;
+    box-shadow: 3px 6px 10px #70D5C6;
+    position: absolute;
+    letter-spacing: 0.305em;
+    line-height: 50px;
+}
+
+.startBtn:hover{
+    background-color: #EBEEEE;
+}
+
+.retryBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    position: absolute;
+    width: 262px;
+    height: 74px;
+    background: #FFFFFF;
+    box-shadow: 3px 6px 10px #70D5C6;
+    border-radius: 25px;
+    font-family: 'Nature Spirit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.305em;
+    color: #50448E;
+    border-width: 0px;
+}
+
+.retryBtn:hover{
+    background-color: #EBEEEE;
+}
+
+.replayBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    position: absolute;
+    width: 293px;
+    height: 74px;
+    background: #FFFFFF;
+    box-shadow: 3px 6px 10px #70D5C6;
+    border-radius: 25px;
+    font-family: 'Nature Spirit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.305em;
+    color: #50448E;
+    border-width: 0px;
+}
+
+.replayBtn:hover{
+    background-color: #EBEEEE;
+}

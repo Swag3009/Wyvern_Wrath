@@ -112,7 +112,6 @@ function draw(){
     }else if(gameState === START){
         startState();
     }
-    
 }
 
 //  Start State functions
@@ -141,20 +140,17 @@ function startSetup(){
     soundPermission.style('vertical-align', 'text-top');
     soundPermission.style('font-family', 'monospace');
 
-    startBtn = createImg('assets/startBtn.png', "Image couldn't be found.");
-    startBtn.position(width/2 - 142, height/2+80);
+    startBtn = createElement('button', "START");
+    startBtn.position(width/2 - 132, height/2+80);
+    startBtn.class('startBtn')
     startBtn.mouseClicked(()=>{
-        //btnClickSound.play();
+        btnClickSound.play();
         startBtn.remove();
         mouseCheckbox.remove();
         keyboardCheckbox.remove();
         soundPermission.remove();
         gameState = PLAY;
     })    
-    // mouseCheckbox.hide();
-    // keyboardCheckbox.hide();
-    // soundPermission.hide();
-    // startBtn.hide();
 }
 
 function startState(){
@@ -307,8 +303,9 @@ function keyPressed(){
 
 //  Game Over State functions
 function endSetup(){
-    retryBtn = createImg('assets/retryBtn.png', "Image couldn't be found.");
-    retryBtn.position(width/2 - 142, height/2+80);
+    retryBtn = createElement('button', 'RETRY');
+    retryBtn.position(width/2 - 131, height/2+80);
+    retryBtn.class('retryBtn')
     retryBtn.mouseClicked(()=>{
         btnClickSound.play();
         window.location.reload();
@@ -325,8 +322,9 @@ function endState(){
 
 //  Game Own State functions
 function wonSetup(){
-    replayBtn = createImg('assets/replayBtn.png', "Image couldn't be found.");
-    replayBtn.position(width/2 - 142, height/2+80);
+    replayBtn = createElement('button', 'REPLAY');
+    replayBtn.position(width/2 - 131, height/2+80);
+    replayBtn.class('replayBtn');
     replayBtn.mouseClicked(()=>{
         btnClickSound.play();
         window.location.reload();

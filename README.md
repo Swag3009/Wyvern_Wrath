@@ -6,7 +6,7 @@ This is a 2D game, created using JavaScript, HTML, CSS, and p5 libraries.
 
 ## Game Link
 
-[Wyvern Wrath](https://linktodocumentation)
+[Wyvern Wrath](https://swag3009.github.io/Wyvern_Wrath/)
 
 
 ## Screenshots

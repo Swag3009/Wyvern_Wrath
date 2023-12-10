@@ -92,7 +92,8 @@ function preload(){
 }
 
 function setup(){
-    new Canvas(0, 0, windowWidth, windowHeight);
+    //new Canvas(0, 0, windowWidth, windowHeight);
+    createCanvas(windowWidth, windowHeight);
     playSetup();
     startSetup();
 }
